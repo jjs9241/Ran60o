@@ -1,4 +1,3 @@
-import './style.css'
 import { setupCounter } from './counter.ts'
 
 export const render = () => {

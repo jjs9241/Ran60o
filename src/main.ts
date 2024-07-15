@@ -1,14 +1,26 @@
 import './style.css'
+import {render as renderHome } from './home.ts'
+import { render as renderOpening } from './opening.ts'
+import { render as renderCalander } from './calander.ts'
+import { render as renderSpace } from './space.ts'
+import { render as renderSurvey } from './survey.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div class="slider-container">
     <div class="slider">
-        <div class="slide" style="background-color: #ff7b72;">슬라이드 11</div>
-        <div class="slide" style="background-color: #7bed9f;">슬라이드 2</div>
-        <div class="slide" style="background-color: #70a1ff;">슬라이드 3</div>
+        <div class="slide" id="home-slide"></div>
+        <div class="slide" id="opening-slide"></div>
+        <div class="slide" id="calander-slide"></div>
+        <div class="slide" id="space-slide"></div>
+        <div class="slide" id="survey-slide"></div>
     </div>
   </div>
 `
+renderHome()
+renderOpening()
+renderCalander()
+renderSpace()
+renderSurvey()
 
 document.addEventListener('DOMContentLoaded', () => {
   const slider: HTMLElement = document.querySelector('.slider')!;
