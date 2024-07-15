@@ -21,7 +21,7 @@ const dDay = '2024-08-24T13:00:00+09:00';
 
 export function setupCounter(counterElement: Element) {
 
-  let clockInterval: NodeJS.Timer | undefined = undefined;
+  let clockInterval: number | undefined = undefined;
 
   function updateClock() {
         try {
@@ -34,6 +34,6 @@ export function setupCounter(counterElement: Element) {
         }
     }
 
-  clockInterval = setInterval(updateClock, 1000);
+  clockInterval = window.setInterval(updateClock, 1000);
   updateClock();
 }
